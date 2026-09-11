@@ -1,0 +1,24 @@
+Linux deployment candidate verification, 2026-09-11
+Commit: 1a0e0ebcdabc1ec96a50cc6ad0de8a778822f211
+Archive: ai-coscientist-linux-20260911-searxng-optional.tar.gz
+Archive bytes: 962829
+SHA256: bf0da686f0e6c89298342d96568742d0d4db6380a1489325ae852bbf03c1e73c
+
+Passed on Linux/amd64 in an ephemeral python:3.12-slim container:
+- 340 packaged content checksums matched; shell scripts have LF and executable permissions.
+- Installation from pyproject.toml, production CLI parser, clean /status and /exit.
+- 14 managed package manifests and exact payload hashes verified.
+- Production HTML-to-PDF rendering, readable Traditional Chinese text and page raster.
+- SearXNG disabled; one HTTP POST to a declared local mock knowledge-center API;
+  exact C4 document stored and read back through production routes.
+- No prior artifacts, runs, dialogue, caches, Windows scripts or working API key packaged.
+
+Not proven:
+- Target machine's real custom API, authentication or service-specific response mapping.
+- Scientific computations through Docker or an unattended LIT end-to-end run.
+- Correct normalization of every prepared scientific quantity. Known proportion-scale
+  validation limitations remain; see docs/linux_deployment_zh-TW.md inside the archive.
+
+No LLM request, new Docker image or scientific task was created for these deployment checks.
+Docker images are not in the source archive; transfer instructions are in the deployment document.
+Source-host diagnostic logs: outputs/linux_release_validation_20260911_v2/
